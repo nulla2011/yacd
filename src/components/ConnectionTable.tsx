@@ -12,6 +12,7 @@ const sortDescFirst = true;
 
 const fullColumns = [
   { accessor: 'id', show: false },
+  { Header: 'Action', accseeor: 'action' },
   { Header: 'Host', accessor: 'host' },
   { Header: 'Process', accessor: 'process' },
   { Header: 'DL', accessor: 'download', sortDescFirst },
