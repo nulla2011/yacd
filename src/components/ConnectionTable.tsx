@@ -40,6 +40,8 @@ function renderCell(cell: { column: { id: string }; value: number }) {
     case 'downloadSpeedCurr':
     case 'uploadSpeedCurr':
       return prettyBytes(cell.value) + '/s';
+    case 'Action':
+      return '❌';
     default:
       return cell.value;
   }
@@ -70,7 +72,7 @@ function Table({ data }) {
       {...getTableProps()}
       style={{
         // @ts-ignore
-        '--col-count': connCtx.hasProcessPath ? '12' : '11',
+        '--col-count': connCtx.hasProcessPath ? '13' : '12',
       }}
     >
       {headerGroups.map((headerGroup) => {
